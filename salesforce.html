@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salesforce - Paul Lorence</title>
+    
+    <!-- Meta tags for social sharing -->
+    <meta property="og:title" content="Salesforce">
+    <meta property="og:description" content="The premise of Agari Phishing Defense is straightforward: the product examines all inbound email messages of an organization and, in near real-time, provides a 'Trust Score' for every message on a scale of 0 to 10.">
+    <meta property="og:image" content="./agari-apd_files/ep-1_orig.png">
+    <meta property="og:url" content="agari-apd.html">
+    
+    <style>
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #4e4e4e;
+            background-color: #f8f9fa;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header styles */
+        .header {
+            background-color: #dcdcdc;
+            padding: 20px 0;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: 400;
+            color: #363b3e;
+            letter-spacing: -1px;
+        }
+        
+        /* Content styles */
+        .content {
+            background-color: white;
+            padding: 40px 0;
+        }
+        
+        .content p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            color: #4e4e4e;
+        }
+        
+        .content strong {
+            color: #363b3e;
+        }
+        
+        /* Image styles */
+        .image-container {
+            text-align: center;
+            margin: 30px 0;
+        }
+        
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        /* Gallery styles */
+        .gallery {
+            margin: 40px 0;
+        }
+        
+        .gallery-nav {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+            gap: 10px;
+        }
+        
+        .gallery-nav button {
+            background: #6c757d;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.3s;
+        }
+        
+        .gallery-nav button:hover {
+            background: #495057;
+        }
+        
+        .gallery-nav button.active {
+            background: #343a40;
+        }
+        
+        .gallery-image {
+            text-align: center;
+        }
+        
+        .gallery-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        /* Video styles */
+        .video-container {
+            text-align: center;
+            margin: 30px 0;
+        }
+        
+        .video-placeholder {
+            background: #f8f9fa;
+            border: 2px dashed #dee2e6;
+            border-radius: 8px;
+            padding: 60px 20px;
+            color: #6c757d;
+            font-size: 1.1rem;
+        }
+        
+        /* List styles */
+        .content ul {
+            margin: 20px 0;
+            padding-left: 30px;
+        }
+        
+        .content li {
+            margin-bottom: 10px;
+            color: #4e4e4e;
+        }
+        
+        /* Footer styles */
+        .footer {
+            background-color: #f8f9fa;
+            padding: 20px 0;
+            text-align: center;
+            color: #6c757d;
+            border-top: 1px solid #dee2e6;
+        }
+        
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .content {
+                padding: 20px 0;
+            }
+            
+            .gallery-nav {
+                flex-wrap: wrap;
+            }
+        }
+        /* Breadcrumb styles */
+        .breadcrumb {
+            background-color: #fff;
+            padding: 15px 0;
+            border-bottom: 1px solid #e9ecef;
+            margin-bottom: 0;
+        }
+        
+        .breadcrumb-container {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+        }
+        
+        .breadcrumb a {
+            color: #6c757d;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .breadcrumb a:hover {
+            color: #495057;
+        }
+        
+        .breadcrumb-separator {
+            color: #adb5bd;
+        }
+        
+        .breadcrumb-current {
+            color: #495057;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+    <nav class="breadcrumb">
+        <div class="container">
+            <div class="breadcrumb-container">
+                <a href="portfolio.html">Portfolio</a>
+                <span class="breadcrumb-separator">›</span>
+                <span class="breadcrumb-current">Salesforce</span>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="header">
+        <div class="container">
+            <h1>Salesforce</h1>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="container">
+            <p>At Salesforce, I focus exclusively on providing UX support for Internal Developer tools. Salesforce is a 26-year-old company with a monolithic codebase that has been slowly transitioning from private data centers to be delivered via public cloud infrastructure. In moving to the public cloud in a provider-agnostic way, Salesforce increases security, scalability and agility. This effort has been externally marketed as Hyperforce.</p>
+
+            <p>Our home-grown internal developer portal provides service owners insight into continuous integration (CI) and continuous delivery (CD) processes as well as other key views supporting the software development lifecycle. It is a tool somewhat analogous to GitLab or Backstage from Spotify. I designed multiple views in this portal, CLI commands, and myriad other views for specific personas like release managers or security compliance officers. These internal tools support more than 8,000 internal developers. </p>
+
+            <p>The following images show some of the views I designed for this portal and a few of the artifacts which lead to the final design. </p>
+                
+                            <!-- Image Gallery -->
+            <div class="gallery">
+                <div class="gallery-nav">
+                    <button class="gallery-btn active" onclick="showImage(0)">1</button>
+                    <button class="gallery-btn" onclick="showImage(1)">2</button>
+                    <button class="gallery-btn" onclick="showImage(2)">3</button>
+                    <button class="gallery-btn" onclick="showImage(3)">4</button>
+                    <button class="gallery-btn" onclick="showImage(4)">5</button>
+                    <button class="gallery-btn" onclick="showImage(5)">6</button>
+                    <button class="gallery-btn" onclick="showImage(6)">7</button>
+                    <button class="gallery-btn" onclick="showImage(7)">8</button>
+                    <button class="gallery-btn" onclick="showImage(8)">9</button>
+                    <button class="gallery-btn" onclick="showImage(9)">10</button>
+                    <button class="gallery-btn" onclick="showImage(10)">11</button>
+                    <button class="gallery-btn" onclick="showImage(11)">12</button>
+                </div>
+                <div class="gallery-image">
+                    <img id="gallery-img" src="./salesforce_files/fdp1.png" alt="Main activity view">
+                </div>
+            </div>  
+
+     
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="container">
+            <p>Copyright © 2025 Paul Lorence</p>
+        </div>
+    </div>
+
+    <script>
+        // Simple gallery functionality
+        const images = [
+            './salesforce_files/fdp1.png',
+            './salesforce_files/fdp2.png',
+            './salesforce_files/fdp2a.png',
+            './salesforce_files/fdp3.png',
+            './salesforce_files/fdp4.png',
+            './salesforce_files/fdp5.png',
+            './salesforce_files/fdp6.png',
+            './salesforce_files/fdp7.png',
+            './salesforce_files/process.1.png',
+            './salesforce_files/process.2.png',
+            './salesforce_files/process.3.png',
+            './salesforce_files/process.4.png',
+        ];
+
+        function showImage(index) {
+            const img = document.getElementById('gallery-img');
+            const buttons = document.querySelectorAll('.gallery-btn');
+            
+            // Update image
+            img.src = images[index];
+            
+            // Update active button
+            buttons.forEach((btn, i) => {
+                btn.classList.toggle('active', i === index);
+            });
+        }
+    </script>
+</body>
+</html>

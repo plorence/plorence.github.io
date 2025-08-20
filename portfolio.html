@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paul Lorence - Portfolio</title>
+    
+    <!-- Meta tags for social sharing -->
+    <meta property="og:title" content="Paul Lorence - Portfolio">
+    <meta property="og:description" content="UX designer and manager specializing in security applications and team building">
+    <meta property="og:image" content="./index_files/apd-button_1.png">
+    <meta property="og:url" content="portfolio.html">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #2a2a2a;
+            background-color: #f8f9fa;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        .header {
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            padding: 20px 0;
+            margin-bottom: 40px;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: 600;
+            color: #2a2a2a;
+            text-decoration: none;
+        }
+        
+        .nav {
+            display: flex;
+            gap: 30px;
+        }
+        
+        .nav a {
+            color: #2a2a2a;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav a:hover {
+            color: #6c757d;
+        }
+        
+        .nav a.active {
+            color: #495057;
+            font-weight: 600;
+        }
+        
+        /* Main Content */
+        .main-content {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .portfolio-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding: 40px;
+        }
+        
+        .project-card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            width: 100%;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+        }
+        
+        .project-content {
+            display: grid;
+            grid-template-columns: 127px 1fr;
+            gap: 30px;
+            padding: 30px;
+            align-items: self-start;
+        }
+        
+        .project-image {
+            width: 127px;
+            height: 172px;
+            overflow: hidden;
+            border-radius: 8px;
+            background-color: #f8f9fa;
+            border: 1px solid #efefef;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+        
+        .project-card:hover .project-image img {
+            transform: scale(1.05);
+        }
+        
+        .project-text {
+            flex: 1;
+        }
+        
+        .project h2 {
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            line-height: 1.2;
+            color: #2a2a2a;
+        }
+        
+        .project p {
+            font-size: 18px;
+            color: #6c757d;
+            line-height: 1.6;
+            margin: 0;
+        }
+        
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 40px 0;
+            color: #6c757d;
+            font-size: 14px;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .portfolio-grid {
+                gap: 15px;
+                padding: 20px;
+            }
+            
+            .project-content {
+                grid-template-columns: 1fr;
+                gap: 20px;
+                padding: 20px;
+                text-align: center;
+            }
+            
+            .project-image {
+                width: 100%;
+                max-width: 200px;
+                margin: 0 auto;
+            }
+            
+            .project h2 {
+                font-size: 24px;
+            }
+            
+            .project p {
+                font-size: 16px;
+            }
+            
+            .header-content {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .nav {
+                gap: 20px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 15px;
+            }
+            
+            .portfolio-grid {
+                padding: 15px;
+            }
+            
+            .project-content {
+                padding: 15px;
+            }
+            
+            .project h2 {
+                font-size: 20px;
+            }
+            
+            .project-image {
+                height: 150px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="portfolio.html" class="logo">Paul Lorence</a>
+                <nav class="nav">
+                    <a href="contact.html">Contact</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="main-content">
+            <div class="portfolio-grid">
+                <a href="salesforce.html" class="project-card">
+                    <div class="project-content">
+                        <div class="project-image">
+                            <img src="./index_files/fdp-tumbnail.png" alt="Salesforce Internal Developer Portal">
+                        </div>
+                        <div class="project-text">
+                            <h2>Salesforce Internal Developer Tools</h2>
+                            <p>UX design for internal developer portal supporting 8,000+ developers during Hyperforce cloud migration</p>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="agari-apd.html" class="project-card">
+                    <div class="project-content">
+                        <div class="project-image">
+                            <img src="./index_files/apd-button_1.png" alt="Agari Phishing Defense">
+                        </div>
+                        <div class="project-text">
+                            <h2>Agari Phishing Defense</h2>
+                            <p>Dashboard visualization showing how "modeling the good" finds a needle in the haystack</p>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="agari-apr.html" class="project-card">
+                    <div class="project-content">
+                        <div class="project-image">
+                            <img src="./index_files/air-button.png" alt="Agari Phishing Response">
+                        </div>
+                        <div class="project-text">
+                            <h2>Agari Phishing Response</h2>
+                            <p>Building an application from step 0</p>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="agari-bp.html" class="project-card">
+                    <div class="project-content">
+                        <div class="project-image">
+                            <img src="./index_files/abp-button_orig.png" alt="Agari Brand Protection">
+                        </div>
+                        <div class="project-text">
+                            <h2>Agari Brand Protection</h2>
+                            <p>Easy SPF Analyzer tool maps arcane DNS syntax to familiar real-world entities</p>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="ironport.html" class="project-card">
+                    <div class="project-content">
+                        <div class="project-image">
+                            <img src="./index_files/ironport-button_orig.png" alt="Cisco / IronPort">
+                        </div>
+                        <div class="project-text">
+                            <h2>Cisco / IronPort</h2>
+                            <p>Web applications for email and web security appliances</p>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="ux-teams.html" class="project-card">
+                    <div class="project-content">
+                        <div class="project-image">
+                            <img src="./index_files/ux-teams-button_orig.png" alt="UX Teams">
+                        </div>
+                        <div class="project-text">
+                            <h2>UX Teams</h2>
+                            <p>Thoughts on building UX teams</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Copyright © 2025</p>
+        </div>
+    </footer>
+</body>
+</html>
