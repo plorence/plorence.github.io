@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agari Brand Protection - Paul Lorence</title>
+    
+    <!-- Meta tags for social sharing -->
+    <meta property="og:title" content="Agari Brand Protection">
+    <meta property="og:description" content="Agari Brand Protection is a workflow tool focused on helping email administrators set up authentication protocols for all outbound email on all domains that an organization owns, primarily through DMARC.">
+    <meta property="og:image" content="./agari-bp_files/authentication-gmail3_orig.png">
+    <meta property="og:url" content="agari-bp.html">
+    
+    <style>
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #4e4e4e;
+            background-color: #f8f9fa;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header styles */
+        .header {
+            background-color: #dcdcdc;
+            padding: 20px 0;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: 400;
+            color: #363b3e;
+            letter-spacing: -1px;
+        }
+        
+        /* Content styles */
+        .content {
+            background-color: white;
+            padding: 40px 0;
+        }
+        
+        .content p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            color: #4e4e4e;
+        }
+        
+        .content strong {
+            color: #363b3e;
+        }
+        
+        .content ol, .content ul {
+            margin: 20px 0;
+            padding-left: 30px;
+        }
+        
+        .content li {
+            margin-bottom: 10px;
+            color: #4e4e4e;
+        }
+        
+        /* Image styles */
+        .image-container {
+            text-align: center;
+            margin: 30px 0;
+        }
+        
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        /* Video styles */
+        .video-container {
+            text-align: center;
+            margin: 30px 0;
+        }
+        
+        .video-placeholder {
+            background: #f8f9fa;
+            border: 2px dashed #dee2e6;
+            border-radius: 8px;
+            padding: 60px 20px;
+            color: #6c757d;
+            font-size: 1.1rem;
+        }
+        
+        /* Footer styles */
+        .footer {
+            background-color: #f8f9fa;
+            padding: 20px 0;
+            text-align: center;
+            color: #6c757d;
+            border-top: 1px solid #dee2e6;
+        }
+        
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .content {
+                padding: 20px 0;
+            }
+        }
+        /* Breadcrumb styles */
+        .breadcrumb {
+            background-color: #fff;
+            padding: 15px 0;
+            border-bottom: 1px solid #e9ecef;
+            margin-bottom: 0;
+        }
+        
+        .breadcrumb-container {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+        }
+        
+        .breadcrumb a {
+            color: #6c757d;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .breadcrumb a:hover {
+            color: #495057;
+        }
+        
+        .breadcrumb-separator {
+            color: #adb5bd;
+        }
+        
+        .breadcrumb-current {
+            color: #495057;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+    <nav class="breadcrumb">
+        <div class="container">
+            <div class="breadcrumb-container">
+                <a href="portfolio.html">Portfolio</a>
+                <span class="breadcrumb-separator">›</span>
+                <span class="breadcrumb-current">Agari Brand Protection</span>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="header">
+        <div class="container">
+            <h1>Agari Brand Protection</h1>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="container">
+            <p><strong>Agari Brand Protection</strong> is a workflow tool focused on helping email administrators set up authentication protocols for all outbound email on all domains that an organization owns, primarily through a standard known as <strong>DMARC</strong>.</p>
+
+            <p>DMARC (Domain-based Message Authentication, Reporting and Conformance) is a widely-accepted open standard that ensures only authorized senders are permitted to send for a particular domain in the From: field of email messages. DMARC builds on two earlier email authentication standards, <strong>SPF</strong> (Sender Policy Framework) and <strong>DKIM</strong> (DomainKeys Identified Mail). Email authentication may seem a little wonky, but it is being adopted by much of the world – and it is getting more visibility in email clients:</p>
+
+            <div class="image-container">
+                <img src="./agari-bp_files/authentication-gmail3_orig.png" alt="Gmail showing email authentication indicators">
+            </div>
+
+            <p>When Agari decided that we wanted to build an SPF builder and analysis tool, we started with a list of requirements and non-goals:</p>
+
+            <p>An administrative owner of a domain publishes a DMARC policy in their DNS records to specify (authorize) which mechanism (DKIM, SPF, or both) is employed when sending email for that domain. The DMARC standard extends the authorization concept of SPF and DKIM in two distinct ways: 1) it specifies how an email receiver should deal with authentication failures (allow the message, quarantine it, or delete it completely), and 2) it creates a <em>reporting mechanism</em> for actions performed under those policies.</p>
+
+            <p>It's this reporting mechanism that provides the data that drive many workflows in the Brand Protection user experience. Based on the data, and administrator can see which senders have sent mail for which domains, and whether those senders were authorized to do so.</p>
+
+            <p>During my time at Agari, I helped create workflows within the Brand Protection product that helped administrators visualize and manage SPF records and DKIM key management, based on DMARC reporting data.</p>
+
+            <div class="image-container">
+                <img src="./agari-bp_files/bp-3_orig.png" alt="Brand Protection dashboard showing domain management">
+            </div>
+
+            <p>Drilling in further, we determined a workflow administrators use when creating or editing SPF records:</p>
+
+            <div class="image-container">
+                <img src="./agari-bp_files/bp-4_orig.png" alt="SPF workflow diagram showing the process">
+            </div>
+
+            <p>The basis of the design of the Easy SPF Analyzer within Brand Protection is straightforward. When attempting to manage SPF, an email administrator must know for a given, selected domain:</p>
+            <ul>
+                <li>which sending services / IP addresses are authorized to send email for the domain (sometimes called a "Sender Inventory")</li>
+                <li>how to account for all services / IP addresses in the format that SPF specifies</li>
+            </ul>
+
+            <p>Agari Brand Protection can identify many of the sending services; these are known as "Well-known Senders" in our product. Many customers also have some internal infrastructure which also sends email for their domain (for example, a custom invoicing application).</p>
+
+            <p>An administrator's first task, then, is to take an inventory of a services and IP addresses for a given domain. In this abstraction, an administrator makes explicit choices by examining and authorizing what's <em>inside</em> the inventory (i.e. allowed); for the things <em>outside</em> the inventory, an administrator must decide if they should be authorized or not:</p>
+
+            <div class="image-container">
+                <img src="./agari-bp_files/bp-2_orig.png" alt="Sender inventory management interface">
+            </div>
+
+            <p>When paired with real data from the reporting mechanism in DMARC, presenting the decision about what's in and what's out becomes straightforward. In this example, <u>all</u> domains are consolidated into this view of well-known senders. In the unapproved tab, an administrator can allow or ignore a sender for all domains:</p>
+
+            <div class="image-container">
+                <img src="./agari-bp_files/bp-animated_orig.gif" alt="Animated demonstration of sender approval workflow">
+            </div>
+
+            <p>Once the inventory for a single domain is understood, an administrator can modify the the SPF record for that domain using the SPF Analyzer.</p>
+
+            <p>In this example, a single domain is selected, and the administrator uses the tool to map the Senders to the <em>syntax</em> of the SPF record:</p>
+
+            <div class="image-container">
+                <img src="./agari-bp_files/bp-5_orig.png" alt="SPF Analyzer interface showing sender mapping">
+            </div>
+
+            <p>While simple in theory, SPF can be challenging to implement. The arcane syntax is very specific, and it can be easy to make typos which render the SPF record useless. In addition, SPF records are often more complex than just lists of IP addresses: they can contain ranges of IP addresses (in CIDR notation), lookups to other DNS records (MX or A records), and "include" statements (pointers to SPF records controlled by another entity. And they cannot exceed 10 total DNS lookups in the entire record.</p>
+
+            <p>As an email administrator, it's not enough to know that "I only use Salesforce to send email marketing campaigns for the domain marketing.foo.com." In order to assert that only email originating from Salesforce.com's infrastructure is authorized to send for marketing.foo.com, an administrator needs to state this fact in the SPF record for "marketing.foo.com." Salesforce's support site contains an <strong><a href="https://help.salesforce.com/articleView?id=emailadmin_spf_include_salesforce.htm&type=5" target="_blank">article</a></strong> that includes detailed instructions explaining that "include:_spf.salesforce.com" is the special string to include in the syntax. But what if that "marketing.foo.com" also uses Marketo and Amazon SES services to send marketing campaigns? What are those lists of IP addresses, or include statements? And what happens if, by including all three senders in the record, I've exceed the 10-lookup limit?</p>
+
+            <p>In this example, the administrator has moved onto step 2 of the SPF analyzer. Here, the senders can be included or omitted from the record, and if the lookup limit is exceeded, the tool suggests combining them via an include statement.</p>
+
+            <div class="image-container">
+                <img src="./agari-bp_files/bp-6_orig.png" alt="SPF Analyzer step 2 showing lookup limit management">
+            </div>
+
+            <p>In this click-through, the relationship between DMARC data, approved sender inventory, and the complex syntax of the SPF Analyzer is shown:</p>
+
+            <div class="video-container">
+                <video controls width="100%" style="max-width: 800px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                    <source src="./agari-bp_files/bp.animated.2.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <p style="margin-top: 15px; color: #6c757d; font-size: 0.9rem;">
+                    <em>Interactive demo showing the brand protection workflow and authentication setup process.</em>
+                </p>
+            </div>
+
+            <p>The SPF and DKIM Analyzer in Agari Brand Response employed several design tenets:</p>
+            <ol>
+                <li><strong>Use logos</strong> for well-known Senders and allow users to define custom senders. (Anticipating and cataloging the IP spaces of public-facing email services is achievable; understanding a customers' internal infrastructure is more difficult.)</li>
+                <li><strong>Use hover states</strong> to highlight the relationship between SPF record syntax and sending services.</li>
+                <li>Account for <strong>"include:" statements and any nested DNS</strong> querying mechanisms within them.</li>
+                <li>Allow users to <strong>create and manage their own "include:" statements</strong> to work around the 10-lookup limit.</li>
+            </ol>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="container">
+            <p>Copyright © 2025 Paul Lorence</p>
+        </div>
+    </div>
+</body>
+</html>

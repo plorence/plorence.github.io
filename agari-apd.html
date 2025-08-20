@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agari Phishing Defense - Paul Lorence</title>
+    
+    <!-- Meta tags for social sharing -->
+    <meta property="og:title" content="Agari Phishing Defense">
+    <meta property="og:description" content="The premise of Agari Phishing Defense is straightforward: the product examines all inbound email messages of an organization and, in near real-time, provides a 'Trust Score' for every message on a scale of 0 to 10.">
+    <meta property="og:image" content="./agari-apd_files/ep-1_orig.png">
+    <meta property="og:url" content="agari-apd.html">
+    
+    <style>
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #4e4e4e;
+            background-color: #f8f9fa;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header styles */
+        .header {
+            background-color: #dcdcdc;
+            padding: 20px 0;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: 400;
+            color: #363b3e;
+            letter-spacing: -1px;
+        }
+        
+        /* Content styles */
+        .content {
+            background-color: white;
+            padding: 40px 0;
+        }
+        
+        .content p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            color: #4e4e4e;
+        }
+        
+        .content strong {
+            color: #363b3e;
+        }
+        
+        /* Image styles */
+        .image-container {
+            text-align: center;
+            margin: 30px 0;
+        }
+        
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        /* Gallery styles */
+        .gallery {
+            margin: 40px 0;
+        }
+        
+        .gallery-nav {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+            gap: 10px;
+        }
+        
+        .gallery-nav button {
+            background: #6c757d;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.3s;
+        }
+        
+        .gallery-nav button:hover {
+            background: #495057;
+        }
+        
+        .gallery-nav button.active {
+            background: #343a40;
+        }
+        
+        .gallery-image {
+            text-align: center;
+        }
+        
+        .gallery-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        /* Video styles */
+        .video-container {
+            text-align: center;
+            margin: 30px 0;
+        }
+        
+        .video-placeholder {
+            background: #f8f9fa;
+            border: 2px dashed #dee2e6;
+            border-radius: 8px;
+            padding: 60px 20px;
+            color: #6c757d;
+            font-size: 1.1rem;
+        }
+        
+        /* List styles */
+        .content ul {
+            margin: 20px 0;
+            padding-left: 30px;
+        }
+        
+        .content li {
+            margin-bottom: 10px;
+            color: #4e4e4e;
+        }
+        
+        /* Footer styles */
+        .footer {
+            background-color: #f8f9fa;
+            padding: 20px 0;
+            text-align: center;
+            color: #6c757d;
+            border-top: 1px solid #dee2e6;
+        }
+        
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .content {
+                padding: 20px 0;
+            }
+            
+            .gallery-nav {
+                flex-wrap: wrap;
+            }
+        }
+        /* Breadcrumb styles */
+        .breadcrumb {
+            background-color: #fff;
+            padding: 15px 0;
+            border-bottom: 1px solid #e9ecef;
+            margin-bottom: 0;
+        }
+        
+        .breadcrumb-container {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+        }
+        
+        .breadcrumb a {
+            color: #6c757d;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .breadcrumb a:hover {
+            color: #495057;
+        }
+        
+        .breadcrumb-separator {
+            color: #adb5bd;
+        }
+        
+        .breadcrumb-current {
+            color: #495057;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+    <nav class="breadcrumb">
+        <div class="container">
+            <div class="breadcrumb-container">
+                <a href="portfolio.html">Portfolio</a>
+                <span class="breadcrumb-separator">›</span>
+                <span class="breadcrumb-current">Agari Phishing Defense</span>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="header">
+        <div class="container">
+            <h1>Agari Phishing Defense</h1>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="container">
+            <p><strong>The premise of Agari Phishing Defense</strong> is straightforward: the product examines all inbound email messages of an organization and, in near real-time, provides a "Trust Score" for every message on a scale of 0 to 10 (where 0 is the least trustworthy and 10 is the most trustworthy). Based on the Trust Score alone, email administrators can set policies to block phishing attempts. Messages scoring less than 1.0 are considered "untrusted"; these messages typically comprise fewer than 1% of all inbound email traffic.</p>
+
+            <p>Capturing the overall "threat" landscape of incoming email messages in a dashboard became one of the larger design challenges for the user experience of this product. Which metrics would quickly show the value of the solution and also provide an interactive demonstration for potential customers evaluating the solution? Could we "tell a story" about our unique approach to finding and stopping phishing messages?</p>
+
+            <p>Our first instinct was to highlight some of the things that our product counted (for example, the total number of messages evaluated in a time period, or the the total number of domains) along with a histogram of the distribution of Trust Scores:</p>
+
+            <div class="image-container">
+                <img src="./agari-apd_files/ep-1_orig.png" alt="Initial dashboard design showing message counts and trust score distribution">
+            </div>
+
+            <p>There were a few problems with this approach. First, providing a count of messages and domains wasn't differentiating or compelling – an email gateway easily provides the same metrics. Second, a simple count doesn't provide any information about the threat posed by those messages. In fact, the histogram tended to be the same regardless of the volume of traffic (fewer than 1% of messages are untrusted). Third, a count of messages doesn't provide a narrative of how our solution made its decision. What was our product actually doing to determine which messages were bad?</p>
+
+            <p>Working with internal stakeholders, I created an interactive poll of potential options to refine requirements:</p>
+
+            <div class="image-container">
+                <img src="./agari-apd_files/ep-1-5_orig.png" alt="Interactive poll for stakeholder feedback">
+            </div>
+
+            <p>I made some quick high- and low-fidelity options of potential solutions containing different options for visualizations, such as top N lists, geolocation, Sankey relationship diagrams, plots in 3 dimensions, multidimensional cross-filter-like and filtering. I then shared them with stakeholders, noting which items were represented in each mockup:</p>
+
+            <!-- Image Gallery -->
+            <div class="gallery">
+                <div class="gallery-nav">
+                    <button class="gallery-btn active" onclick="showImage(0)">Option 1</button>
+                    <button class="gallery-btn" onclick="showImage(1)">Option 2</button>
+                    <button class="gallery-btn" onclick="showImage(2)">Option 3</button>
+                    <button class="gallery-btn" onclick="showImage(3)">Option 4</button>
+                </div>
+                <div class="gallery-image">
+                    <img id="gallery-img" src="./agari-apd_files/ep-4_orig.png" alt="Design option 1">
+                </div>
+            </div>
+
+            <p><span style="color:rgb(98, 98, 98)">It became clear that we'd need a visualization aimed at providing insight into the components we were using to determine a trust score. Those two components were the concepts of&nbsp;</span><strong style="color:rgb(98, 98, 98)">domain reputation</strong><span style="color:rgb(98, 98, 98)">&nbsp;and&nbsp;</span><strong style="color:rgb(98, 98, 98)">message authenticity</strong><span style="color:rgb(98, 98, 98)">.</span></p>
+
+            <p><strong style="color:rgb(98, 98, 98)">Domain reputation</strong><span style="color:rgb(98, 98, 98)">&nbsp;is defined as: how reputable is the domain the message is purporting to be from? Organizations receive messages from myriad domains such as newly registered domains, well-known and established domains, domains of existing and potential partners. A phish message from a domain you've never seen before is bad; a phish message spoofing an existing trusted partner is arguably worse.</span></p>
+
+            <p><strong style="color:rgb(98, 98, 98)">Message authenticity</strong><span style="color:rgb(98, 98, 98)">&nbsp;is defined as: are the messages from the domain authentic? Do they adhere to email authentication standards (SPF, DKIM, DMARC) explicitly, or do they match our proprietary method of modeling a domain's sending pattern? High-volume and reputable senders often take the steps necessary to authenticate their messages in order to ensure they are delivered (i.e. they aren't considered spam by scanning engines).&nbsp;</span></p>
+
+            <p><span style="color:rgb(98, 98, 98)">Working iteratively, we plotted messages along these two axes, and the result allowed us to now represent&nbsp;</span><strong style="color:rgb(98, 98, 98)">volume</strong><span style="color:rgb(98, 98, 98)">&nbsp;in the visualization; we could also show the&nbsp;</span><strong style="color:rgb(98, 98, 98)">top sending domains</strong><span style="color:rgb(98, 98, 98)">&nbsp;in each of the quadrants of the resulting 2x2 matrix seen in this early version:&nbsp;</span></p>
+
+            <div class="image-container">
+                <img src="./agari-apd_files/ep-7.png" alt="2x2 matrix visualization showing domain reputation vs message authenticity">
+            </div>
+
+            <p><span style="color:rgb(98, 98, 98)">The default view shown above tells a quick story that aligns with customers' perception of the the threat landscape:</span></p>
+
+            <ul style="color:rgb(98, 98, 98)">
+                <li><strong>High domain reputation / high authenticity / high volume senders</strong> (shown in the upper-right quadrant) should be instantly recognizable to customers. These trustworthy messages are a large portion of inbound email flow; you shouldn't be worried about the the large swath of "good" email you receive in a month.</li>
+                <li>It's the other three quadrants which should be more concerning, because they represent inherently riskier messages. These lower volume senders messages are either from unfamiliar domains (i.e. low domain reputation), or are inauthentic messages from reputable domains (i.e. spoofs), or both.</li>
+            </ul>
+
+            <p><span style="color:rgb(98, 98, 98)">Clicking the "spoof" filter to narrow in on attacks, you can see that the 2,483&nbsp;</span><em style="color:rgb(98, 98, 98)">inauthentic</em><span style="color:rgb(98, 98, 98)">&nbsp;messages from aetna.com (filtered from the 4,000,000+ total messages in the previous view) are more likely to be phishing messages which warrant further investigation:&nbsp;</span></p>
+
+            <div class="image-container">
+                <img src="./agari-apd_files/ep-6-1.png" alt="Filtered view showing inauthentic messages from aetna.com">
+            </div>
+
+            <p><span style="color:rgb(98, 98, 98)">So how do you find a needle in the haystack? It's easy – just remove all the hay, and you'll be left with a needle. Modeling the reputable domains with authentic messages allows Agari Phishing Defense to find the outliers and the spammers. The refrain of "</span><strong style="color:rgb(98, 98, 98)">Agari Phishing Defense models the good in order to understand the bad</strong><span style="color:rgb(98, 98, 98)">" was used as a fundamental premise in the marketing materials, and the visualization helped to demonstrate and reinforce that idea – interactively, and with the customer's own data.&nbsp;&nbsp;</span></p>
+
+            <p><span style="color:rgb(98, 98, 98)">The visualization became more compelling in a few ways:</span></p>
+
+            <ul style="color:rgb(98, 98, 98)">
+                <li><strong>We made each quadrant zoomable.</strong> Being able to hover over small volume senders in one of the quadrants allowed users to quickly scan the landscape of all the domains of suspicious senders. In the visualization, all search results of actual received messages are available in a single-click on any circle.</li>
+                <li><strong>We created a set of filters</strong> to further filter and "drill in" on the many permutations of potential phishing messages (spoofing a domain, spoofing a well-known brand, spoofing an important individual within your organization, like the CEO). These filters also reinforce the domain reputation and message authenticity plotted on each quadrant.</li>
+                <li><strong>We provided a domain search</strong> for quickly showing outliers. It's not the 99% of messages from "gmail.com" you received which were actually authentic, it's the inauthentic 1% claiming to be from "gmail.com" that warrant further attention.</li>
+                <li><strong>It's not unusual for an organization's largest inbound domain to be the primary domain of the organization itself.</strong> As more organizations use third-party services to send "into" an organization, those services (Salesforce, MailChimp, Sendgrid, etc.) often send on behalf of the organization itself, i.e. the messages are "from" the primary domain of the organization. In this way, the visualization provides an argument for our complementary product focused on outbound (sending) email authentication.</li>
+            </ul>
+
+            <p><span style="color:rgb(98, 98, 98)">You can see some of these concepts in this click-through:&nbsp;</span></p>
+
+            <div class="video-container">
+                <video controls width="100%" style="max-width: 800px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                    <source src="./agari-apd_files/ep.animated.4.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <p style="margin-top: 15px; color: #6c757d; font-size: 0.9rem;">
+                    <em>Interactive demo showing the visualization features including filtering, zooming, and domain search functionality.</em>
+                </p>
+            </div>
+
+            <p><span style="color:rgb(98, 98, 98)">The visualization was created in D3.js. I worked closely with the front-end developer over multiple iterations to introduce color to correlate to the percentage of messages passing authentication, as well as to scale and sample appropriately. This visualization works effectively for low- and high-volume organizations.&nbsp;</span></p>
+
+            <p><span style="color:rgb(98, 98, 98)">Agari Phishing Defense employs a few design tenets:&nbsp;</span></p>
+            <ul style="color:rgb(98, 98, 98)">
+                <li><strong>Use the familiar, human-readable, conspicuous parts of email</strong>&nbsp;(From, Subject, To)<strong>&nbsp;as a gateway</strong>&nbsp;into the more hidden components the comprise message "trust" (IP addresses in Received headers, email authentication results).&nbsp;</li>
+                <li><strong>All roads lead to search results</strong>:&nbsp;for any aggregate view (number of messages of a specific threat type, from a specific domain, matching a policy, or affected by a threat feed rule), always provide a link to the set of messages (i.e. the search results).&nbsp;</li>
+            </ul>
+
+            <p><span style="color:rgb(98, 98, 98)">Agari Phishing Defense is currently in use protecting several hundred organizations in the US, Europe, and Australia.&nbsp;</span></p>
+            <p><span style="color:rgb(98, 98, 98)">The application processes nearly a trillion email messages every 3 months.&nbsp;&nbsp;</span></p>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="container">
+            <p>Copyright © 2025 Paul Lorence</p>
+        </div>
+    </div>
+
+    <script>
+        // Simple gallery functionality
+        const images = [
+            './agari-apd_files/ep-4_orig.png',
+            './agari-apd_files/ep-5_orig.png',
+            './agari-apd_files/ep-2_orig.png',
+            './agari-apd_files/ep-3_orig.png'
+        ];
+
+        function showImage(index) {
+            const img = document.getElementById('gallery-img');
+            const buttons = document.querySelectorAll('.gallery-btn');
+            
+            // Update image
+            img.src = images[index];
+            
+            // Update active button
+            buttons.forEach((btn, i) => {
+                btn.classList.toggle('active', i === index);
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agari Phishing Response - Paul Lorence</title>
+    
+    <!-- Meta tags for social sharing -->
+    <meta property="og:title" content="Agari Phishing Response">
+    <meta property="og:description" content="Agari Phishing Response is a tool designed to quickly triage employee-submitted phishing messages. I designed the product from its inception after on-site visits to several large Agari customers.">
+    <meta property="og:image" content="./agari-apr_files/air-2.jpg">
+    <meta property="og:url" content="agari-apr.html">
+    
+    <style>
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #4e4e4e;
+            background-color: #f8f9fa;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header styles */
+        .header {
+            background-color: #dcdcdc;
+            padding: 20px 0;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: 400;
+            color: #363b3e;
+            letter-spacing: -1px;
+        }
+        
+        /* Content styles */
+        .content {
+            background-color: white;
+            padding: 40px 0;
+        }
+        
+        .content p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            color: #4e4e4e;
+        }
+        
+        .content strong {
+            color: #363b3e;
+        }
+        
+        .content ol, .content ul {
+            margin: 20px 0;
+            padding-left: 30px;
+        }
+        
+        .content li {
+            margin-bottom: 10px;
+            color: #4e4e4e;
+        }
+        
+        /* Image styles */
+        .image-container {
+            text-align: center;
+            margin: 30px 0;
+        }
+        
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        /* Gallery styles */
+        .gallery {
+            margin: 40px 0;
+        }
+        
+        .gallery-nav {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        
+        .gallery-nav button {
+            background: #6c757d;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.3s;
+        }
+        
+        .gallery-nav button:hover {
+            background: #495057;
+        }
+        
+        .gallery-nav button.active {
+            background: #343a40;
+        }
+        
+        .gallery-image {
+            text-align: center;
+        }
+        
+        .gallery-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        /* Footer styles */
+        .footer {
+            background-color: #f8f9fa;
+            padding: 20px 0;
+            text-align: center;
+            color: #6c757d;
+            border-top: 1px solid #dee2e6;
+        }
+        
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .content {
+                padding: 20px 0;
+            }
+            
+            .gallery-nav {
+                flex-wrap: wrap;
+            }
+        }
+        /* Breadcrumb styles */
+        .breadcrumb {
+            background-color: #fff;
+            padding: 15px 0;
+            border-bottom: 1px solid #e9ecef;
+            margin-bottom: 0;
+        }
+        
+        .breadcrumb-container {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+        }
+        
+        .breadcrumb a {
+            color: #6c757d;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .breadcrumb a:hover {
+            color: #495057;
+        }
+        
+        .breadcrumb-separator {
+            color: #adb5bd;
+        }
+        
+        .breadcrumb-current {
+            color: #495057;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+    <nav class="breadcrumb">
+        <div class="container">
+            <div class="breadcrumb-container">
+                <a href="portfolio.html">Portfolio</a>
+                <span class="breadcrumb-separator">›</span>
+                <span class="breadcrumb-current">Agari Phishing Response</span>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="header">
+        <div class="container">
+            <h1>Agari Phishing Response</h1>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="container">
+            <p><strong>Agari Phishing Response</strong> is a tool designed to quickly triage employee-submitted phishing messages. I designed the product from its inception after on-site visits to several large Agari customers in the airline, publishing, and insurance industries. Regardless of their industry, email administrators at these organizations had the same fundamental problem: every employee in my organization has a "Report phishing" button in their email client; how can I quickly and efficiently respond to a constant stream of employee submissions of suspicious messages?</p>
+
+            <p>Through a series of interviews, we discovered that administrators followed the same general workflow:</p>
+            
+            <ol>
+                <li><strong>Begin the triage process.</strong><br>
+                - Receive employee-submitted suspected phish message into a queue.<br>
+                Optionally contact the submitter and train on how to re-submit the message as an attachment to obtain the full, original headers instead of just forwarding the message.<br>
+                - Deconstruct the message into its component parts: message headers, attachments, URLs, message body content.</li>
+                
+                <li><strong>Determine: Is this message bad?</strong><br>
+                Using free or open-source tools, evaluate each component:<br>
+                • message header analysis (mxtoolbox.com or other DNS blacklist tools)<br>
+                • attachment analysis (VirusTotal or on-premises sandbox like FireEye)<br>
+                • URL analysis (VirusTotal or urlscan.io)</li>
+                
+                <li><strong>Determine: What other similar messages came in? Who was impacted and how?</strong><br>
+                Using internal search tools (O365 or Splunk), determine if other employees were impacted.<br>
+                Some users referred to this step as "determining the blast radius" of the malicious campaign.</li>
+                
+                <li><strong>Take action: What should I do about it?</strong><br>
+                - Remove messages from inboxes of all affected employees.<br>
+                - Document actions / results in a report or ticketing system.</li>
+            </ol>
+
+            <div class="image-container">
+                <img src="./agari-apr_files/air-2.jpg" alt="Problem statement slide showing the phishing response workflow">
+            </div>
+
+            <p>This process was condensed to a single-slide problem statement we shared with potential customers and our executive staff:</p>
+
+            <div class="image-container">
+                <img src="./agari-apr_files/air-1_orig.png" alt="Problem statement slide showing SOC analyst workflow">
+            </div>
+
+            <p style="text-align: center; font-size: 0.9rem; color: #6c757d;">SOC = Security Operations Center &nbsp; &nbsp; &nbsp;FP = False Positive</p>
+
+            <p>We were aware of related tools in this space, but those tools were aimed more at employee training through phishing <em>simulation</em>. For example, a tool like KnowBe4 or Cofense/PhishMe can deliberately send well-crafted phishing messages to an employee base, track which users "took the bait" and therefore require additional training.</p>
+
+            <p>Most organizations also struggled with an initial triage, or scanning. For example, given a list of 45 submissions, where should we focus first on the newest submissions, or the oldest in the queue? It might make sense to focus on the oldest (a first-in / first-out strategy), unless, of course, those older messages proved to be benign.</p>
+
+            <p>Below is the initial mind-map we created to capture use cases. Through interviews, we learned that administrators treated every user submission as a discrete "investigation," and their mental model mapped things like "assignee" and "remediation state" to each investigation. Some administrators reported spending 1-2 hours per investigation, and, in some organizations, they reported <em>never</em> being able to keep up with the constant onslaught of submissions.</p>
+
+            <div class="image-container">
+                <img src="./agari-apr_files/air-1-5_orig.png" alt="Mind map showing use cases and workflow">
+            </div>
+
+            <div class="image-container">
+                <img src="./agari-apr_files/air-3-5_orig.png" alt="Detailed workflow diagram">
+            </div>
+
+            <p>We realized that in order to be valuable, the tool must at least provide an initial analysis (automation), and – like Agari Phishing Defense – having a human-readable rendering of the message contents would be extremely helpful in aiding quick confirmation, answering the question, "Is the employee reporting a true phishing attack, or is this just a benign (but annoying) marketing campaign?"</p>
+
+            <p>Based on these ideas, I created some low-fidelity mockups for an initial design aimed at helping users answer that key question quickly by combining a human-readable portion in the top pane with the results of the automated analysis in the bottom pane:</p>
+
+            <div class="image-container">
+                <img src="./agari-apr_files/air-6_orig.png" alt="Low-fidelity mockup showing message analysis interface">
+            </div>
+
+            <p>Because the tool is fundamentally a list management workflow (list/detail design pattern), the tool must provide easy sort and filter options on the index of investigations as well as a quick way to drill into the details of a selected investigation:</p>
+
+            <div class="image-container">
+                <img src="./agari-apr_files/air-4_orig.png" alt="List view showing investigation index">
+            </div>
+
+            <p>For each item (investigation) in the index view, we tried to fit as much succinct information into as small a space as possible. We employed progressive disclosure techniques to display additional information. Moving to a high-fidelity interactive prototype, we gathered more customer feedback from select users.</p>
+
+            <div class="image-container">
+                <img src="./agari-apr_files/air-7_orig.png" alt="High-fidelity prototype showing investigation details">
+            </div>
+
+            <div class="image-container">
+                <img src="./agari-apr_files/air-8_orig.png" alt="Detailed investigation view with analysis results">
+            </div>
+
+            <p>Users were generally happy with the approach and framing; their feedback was to get more succinct information and summaries into the investigations index.</p>
+
+            <p>Based on this feedback, we refined the "selected" state of an investigation on the index view to also show the HTML rendering of the message. For each user-submission, we created a "tile" to include the following pieces of information:</p>
+
+            <ol>
+                <li>Unique investigation ID</li>
+                <li>Initial system-generated categorization</li>
+                <li>Initial system-generated severity</li>
+                <li>Assignee</li>
+                <li>Reporter</li>
+                <li>Timestamp of submission / age</li>
+                <li>From and Subject of reported message</li>
+                <li>Count of similar messages found (impact)</li>
+                <li>Message Trust Score of reported message</li>
+                <li>Count and analysis of URLs</li>
+                <li>Count and analysis of attachments</li>
+                <li>Count and analysis of domains</li>
+                <li>Count and analysis of IPs</li>
+            </ol>
+
+            <p>A tile could be selected to display the HTML rendering before drilling into the details around similar messages.</p>
+
+            <p>Once we had confirmation that the information architecture of the product was sound, I created a detailed style guide for bespoke components:</p>
+
+            <!-- Image Gallery -->
+            <div class="gallery">
+                <div class="gallery-nav">
+                    <button class="gallery-btn active" onclick="showImage(0)">Style Guide 1</button>
+                    <button class="gallery-btn" onclick="showImage(1)">Style Guide 2</button>
+                    <button class="gallery-btn" onclick="showImage(2)">Style Guide 3</button>
+                    <button class="gallery-btn" onclick="showImage(3)">Style Guide 4</button>
+                    <button class="gallery-btn" onclick="showImage(4)">Style Guide 5</button>
+                    <button class="gallery-btn" onclick="showImage(5)">Style Guide 6</button>
+                </div>
+                <div class="gallery-image">
+                    <img id="gallery-img" src="./agari-apr_files/air-12_orig.png" alt="Style guide component 1">
+                </div>
+            </div>
+
+            <p>Agari Phishing Response employs several design tenets:</p>
+            <ol>
+                <li><strong>"Follow the red."</strong> Given a long and complex list of components with varying indicators of "badness," a user only needs to focus on the red glyphs (like indicator lights in a dashboard) to determine which submissions require immediate attention.</li>
+                <li><strong>Every organization will have a different threshold and priority system.</strong> Strive to provide the necessary information consistently and objectively, and users will develop their own sense of how many indicators of "badness" equate to a critical/high/medium/low severity.</li>
+            </ol>
+
+            <p>The final design of the Analyst page (list of investigations) with HTML rendering:</p>
+
+            <div class="image-container">
+                <img src="./agari-apr_files/air-18_orig.png" alt="Final analyst page design showing investigation list with HTML rendering">
+            </div>
+
+            <p>By integrating with the cybersecurity industry's leading third-party forensic tools and automating investigation and remediation workflows, Agari Phishing Response customers have reported that their phishing response times have decreased by as much as 95% – saving thousands of hours of analyst time and helping to contain breaches before damage is done.</p>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="container">
+            <p>Copyright © 2025 Paul Lorence</p>
+        </div>
+    </div>
+
+    <script>
+        // Simple gallery functionality
+        const images = [
+            './agari-apr_files/air-12_orig.png',
+            './agari-apr_files/air-9_orig.png',
+            './agari-apr_files/air-10_orig.png',
+            './agari-apr_files/air-11_orig.png',
+            './agari-apr_files/air-13_orig.png',
+            './agari-apr_files/air-14_orig.png'
+        ];
+
+        function showImage(index) {
+            const img = document.getElementById('gallery-img');
+            const buttons = document.querySelectorAll('.gallery-btn');
+            
+            // Update image
+            img.src = images[index];
+            
+            // Update active button
+            buttons.forEach((btn, i) => {
+                btn.classList.toggle('active', i === index);
+            });
+        }
+    </script>
+</body>
+</html>
