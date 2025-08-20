@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Paul Lorence</title>
+    
+    <!-- Meta tags for social sharing -->
+    <meta property="og:title" content="Contact">
+    <meta property="og:description" content="Hi, I'm Paul, a UX designer and manager of UX teams. I have experience being the sole designer in a startup, building and growing UX teams, and managing UX functions at large enterprises.">
+    <meta property="og:image" content="./contact_files/me-again-2.png">
+    <meta property="og:url" content="contact.html">
+    
+    <style>
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #4e4e4e;
+            background-color: #f8f9fa;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header styles */
+        .header {
+            background-color: #dcdcdc;
+            padding: 20px 0;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: 400;
+            color: #363b3e;
+            letter-spacing: -1px;
+        }
+        
+        /* Content styles */
+        .content {
+            background-color: white;
+            padding: 40px 0;
+        }
+        
+        .content p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            color: #4e4e4e;
+        }
+        
+        .content strong {
+            color: #363b3e;
+        }
+        
+        /* Contact info styles */
+        .contact-info {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 40px;
+            align-items: start;
+            margin: 40px 0;
+        }
+        
+        .contact-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        .contact-text strong {
+            color: #363b3e;
+        }
+        
+        .contact-text a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        
+        .contact-text a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Resume link styles */
+        .resume-link {
+            text-align: center;
+            margin: 20px 0;
+        }
+        
+        .resume-link a {
+            display: inline-block;
+            text-decoration: none;
+            color: #4e4e4e;
+        }
+        
+        .resume-link img {
+            width: 64px;
+            height: auto;
+            margin-bottom: 10px;
+        }
+        
+        .resume-link div {
+            font-size: 0.9rem;
+            color: #6c757d;
+        }
+        
+        /* Profile image styles */
+        .profile-image {
+            text-align: center;
+            margin: 40px 0;
+        }
+        
+        .profile-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        /* Footer styles */
+        .footer {
+            background-color: #f8f9fa;
+            padding: 20px 0;
+            text-align: center;
+            color: #6c757d;
+            border-top: 1px solid #dee2e6;
+        }
+        
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .content {
+                padding: 20px 0;
+            }
+            
+            .contact-info {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+        }
+        /* Breadcrumb styles */
+        .breadcrumb {
+            background-color: #fff;
+            padding: 15px 0;
+            border-bottom: 1px solid #e9ecef;
+            margin-bottom: 0;
+        }
+        
+        .breadcrumb-container {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+        }
+        
+        .breadcrumb a {
+            color: #6c757d;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .breadcrumb a:hover {
+            color: #495057;
+        }
+        
+        .breadcrumb-separator {
+            color: #adb5bd;
+        }
+        
+        .breadcrumb-current {
+            color: #495057;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+    <nav class="breadcrumb">
+        <div class="container">
+            <div class="breadcrumb-container">
+                <a href="portfolio.html">Portfolio</a>
+                <span class="breadcrumb-separator">›</span>
+                <span class="breadcrumb-current">Contact</span>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="header">
+        <div class="container">
+            <h1>Contact</h1>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="container">
+            <div class="contact-info">
+                <div class="contact-text">
+                    <p><strong>Hi, I'm Paul</strong>, a UX designer and manager of UX teams. I have experience being the sole designer in a startup, building and growing UX teams, and managing UX functions at large enterprises.</p>
+                    
+                    <p>When I'm not working, I like playing guitar and running (not at the same time).</p>
+                    
+                    <p><a href="mailto:plorence@gmail.com">plorence[at]gmail.com</a><br>
+                    <a href="tel:+14157301863">1.415.730.1863</a></p>
+                </div>
+                
+                <div class="resume-link">
+                    <a href="paul.lorence.2025.pdf" target="_blank">
+                        <img src="./contact_files/64px-pdf-file-icon-svg_orig.png" alt="PDF icon">
+                        <div>Resume</div>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="profile-image">
+                <img src="./contact_files/me-again-2.png" alt="Paul Lorence">
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="container">
+            <p>Copyright © 2025 Paul Lorence</p>
+        </div>
+    </div>
+</body>
+</html>
