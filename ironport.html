@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IronPort - Paul Lorence</title>
+    
+    <!-- Meta tags for social sharing -->
+    <meta property="og:title" content="IronPort">
+    <meta property="og:description" content="The IronPort user interfaces maintained a stripped-down, Spartan aesthetic. Part of this was due to the nature of IronPort's target audience: no-nonsense system administrators buying and configuring security appliances.">
+    <meta property="og:image" content="./ironport_files/visual1b_orig.jpg">
+    <meta property="og:url" content="ironport.html">
+    
+    <style>
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #4e4e4e;
+            background-color: #f8f9fa;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header styles */
+        .header {
+            background-color: #dcdcdc;
+            padding: 20px 0;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: 400;
+            color: #363b3e;
+            letter-spacing: -1px;
+        }
+        
+        /* Content styles */
+        .content {
+            background-color: white;
+            padding: 40px 0;
+        }
+        
+        .content p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            color: #4e4e4e;
+        }
+        
+        .content strong {
+            color: #363b3e;
+        }
+        
+        /* Image styles */
+        .image-container {
+            text-align: center;
+            margin: 30px 0;
+        }
+        
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        /* Gallery styles */
+        .gallery {
+            margin: 40px 0;
+        }
+        
+        .gallery-nav {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+            gap: 10px;
+        }
+        
+        .gallery-nav button {
+            background: #6c757d;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.3s;
+        }
+        
+        .gallery-nav button:hover {
+            background: #495057;
+        }
+        
+        .gallery-nav button.active {
+            background: #343a40;
+        }
+        
+        .gallery-image {
+            text-align: center;
+        }
+        
+        .gallery-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        /* Footer styles */
+        .footer {
+            background-color: #f8f9fa;
+            padding: 20px 0;
+            text-align: center;
+            color: #6c757d;
+            border-top: 1px solid #dee2e6;
+        }
+        
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .content {
+                padding: 20px 0;
+            }
+            
+            .gallery-nav {
+                flex-wrap: wrap;
+            }
+        }
+        /* Breadcrumb styles */
+        .breadcrumb {
+            background-color: #fff;
+            padding: 15px 0;
+            border-bottom: 1px solid #e9ecef;
+            margin-bottom: 0;
+        }
+        
+        .breadcrumb-container {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+        }
+        
+        .breadcrumb a {
+            color: #6c757d;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .breadcrumb a:hover {
+            color: #495057;
+        }
+        
+        .breadcrumb-separator {
+            color: #adb5bd;
+        }
+        
+        .breadcrumb-current {
+            color: #495057;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+    <nav class="breadcrumb">
+        <div class="container">
+            <div class="breadcrumb-container">
+                <a href="portfolio.html">Portfolio</a>
+                <span class="breadcrumb-separator">›</span>
+                <span class="breadcrumb-current">Cisco / IronPort</span>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="header">
+        <div class="container">
+            <h1>IronPort</h1>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="container">
+            <p><strong>The IronPort user interfaces maintained a stripped-down, Spartan aesthetic.</strong> Part of this was due to the nature of IronPort's target audience of no-nonsense system administrators buying and configuring a dedicated, on-premises security appliance designed for stopping spam and viruses. Another part was due to the fact that the web application was built in a python-based front-end framework hosted from the appliance itself (an on-premises solution vs. a SaaS web-based application). Nearly all of the UI components were built from scratch. Like the Agari products, the IronPort appliances won several awards from SC Magazine and were praised for their ease-of-use.</p>
+
+            <p>The UI contained many of the elements expected in modern web-based SaaS application: pages for configuration, a method for building policies, views and permissions for different user roles, dashboards, end-user portals, and a robust reporting system providing real-time, scheduled, and PDF reports.</p>
+
+            <p>We licensed Splunk for log file searching, and the UI was localized into 9 languages. The design's utilitarian HTML allowed us to create high-fidelity wireframes in the final presentation medium, which saved time and kept the presentation and the design system under our control. The consistency of the standards allowed us to quickly create similar interfaces for the web security (proxy) appliances and centralized quarantine management appliances as the product line evolved.</p>
+
+            <p>Below are some snapshots of design work over the 7 years when I ran the UX design team at IronPort. These designs lived well into the transformation of the IronPort appliances into the Cisco Email Security (CES) product offering.</p>
+
+            <!-- Image Gallery -->
+            <div class="gallery">
+                <div class="gallery-nav">
+                    <button class="gallery-btn active" onclick="showImage(0)">1</button>
+                    <button class="gallery-btn" onclick="showImage(1)">2</button>
+                    <button class="gallery-btn" onclick="showImage(2)">3</button>
+                    <button class="gallery-btn" onclick="showImage(3)">4</button>
+                    <button class="gallery-btn" onclick="showImage(4)">5</button>
+                    <button class="gallery-btn" onclick="showImage(5)">6</button>
+                    <button class="gallery-btn" onclick="showImage(7)">7</button>
+                    <button class="gallery-btn" onclick="showImage(8)">8</button>
+                    <button class="gallery-btn" onclick="showImage(9)">9</button>
+                    <button class="gallery-btn" onclick="showImage(10)">10</button>
+                </div>
+                <div class="gallery-image">
+                    <img id="gallery-img" src="./ironport_files/visual1b_orig.jpg" alt="IronPort interface design">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="container">
+            <p>Copyright © 2025 Paul Lorence</p>
+        </div>
+    </div>
+
+    <script>
+        // Gallery functionality
+        const images = [
+            './ironport_files/visual1b_orig.jpg',
+            './ironport_files/sma2_orig.jpg',
+            './ironport_files/ssw1_orig.jpg',
+            './ironport_files/visual2_orig.jpg',
+            './ironport_files/visual3_orig.jpg',
+            './ironport_files/visual4_orig.jpg',
+            './ironport_files/rebranding-5_orig.gif',
+            './ironport_files/research1_orig.jpg',
+            './ironport_files/per-rcpt-b_orig.jpg',
+            './ironport_files/standards4_orig.jpg',
+            './ironport_files/ssw5_orig.jpg',
+        ];
+
+        const altTexts = [
+            'IronPort interface design',
+            'Security management interface',
+            'Web security interface',
+            'Interface visualization',
+            'Design mockup',
+            'User interface design',
+            'Rebranding animation',
+            'User research findings',
+            'Per-recipient configuration',
+            'Design standards documentation',
+            'Web security configuration'
+        ];
+
+        function showImage(index) {
+            const img = document.getElementById('gallery-img');
+            const buttons = document.querySelectorAll('.gallery-btn');
+            
+            // Update image
+            img.src = images[index];
+            img.alt = altTexts[index];
+            
+            // Update button states
+            buttons.forEach(btn => btn.classList.remove('active'));
+            buttons[index].classList.add('active');
+        }
+    </script>
+</body>
+</html>
